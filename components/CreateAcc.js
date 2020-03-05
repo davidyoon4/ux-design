@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput } from 'react-native';
-
-var primaryColor = '#4A9C2D';
+import * as Styles from '../styles';
+import * as GlobalStyles from '../globalStyles';
 
 class CreateAcc extends React.Component{
   constructor(props){
@@ -19,10 +19,16 @@ class CreateAcc extends React.Component{
     // if (this.state.page == 'createAcc'){
       return (
         <View style={styles.container}>
-            <Text style={styles.title}>Create An Account</Text>
-          <TextInput style={styles.input} placeholder="NU Email"/>
-          <TouchableOpacity style={styles.buttonSecondary}>
-              <Text style={styles.buttonSecondaryText}>Sign In</Text>
+            <Text style={GlobalStyles.styles.title}>Sign Up</Text>
+          <View style={styles.formContainer}>
+          <TextInput style={GlobalStyles.styles.input} placeholder="Name"/>
+          <TextInput style={GlobalStyles.styles.input} placeholder="NU Email"/>
+          <TextInput style={GlobalStyles.styles.input} placeholder="Password"/>
+          <TextInput style={GlobalStyles.styles.input} placeholder="Confirm Password"/>
+          <TextInput style={GlobalStyles.styles.input} placeholder="General Location"/>
+          </View>
+          <TouchableOpacity style={GlobalStyles.styles.buttonPrimary}>
+              <Text style={GlobalStyles.styles.buttonPrimaryText}>Sign Up</Text>
           </TouchableOpacity>
         </View>
       );
@@ -39,12 +45,12 @@ export default CreateAcc;
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#f1f1f1',
+      backgroundColor: Styles.colors.lightGray,
       alignItems: 'center',
       justifyContent: 'center',
     },
     title: {
-      color: primaryColor,
+      color: Styles.colors.primaryColor,
       fontWeight: 'bold',
       fontSize: 25
     },
@@ -57,7 +63,7 @@ const styles = StyleSheet.create({
     },
     buttonPrimaryText:{
       fontWeight: "bold",
-      color: primaryColor,
+      color: Styles.colors.primaryColor,
       textAlign:'center',
       paddingLeft : 15,
       paddingRight : 15
@@ -78,12 +84,7 @@ const styles = StyleSheet.create({
       paddingLeft : 15,
       paddingRight : 15
     },
-    input:{
-        marginTop: 10,
-        marginBottom: 10,
-        fontSize: 14,
-        borderColor: 'white',
-        borderWidth: 1,
-        backgroundColor: '#8E8E93',
+    formContainer : {
+      flex: 0.65
     }
   });

@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import CreateAcc from './CreateAcc';
-
-var primaryColor = '#4A9C2D';
+import * as Styles from '../styles';
+import * as GlobalStyles from '../globalStyles';
 
 class Welcome extends React.Component{
   constructor(props){
@@ -16,16 +16,17 @@ class Welcome extends React.Component{
     })
   }
 
+
   render = () => {
     if (this.state.page == 'welcome'){
       return (
-        <View style={styles.container}>
-          <Text style={styles.title}>Welcome!</Text>
-          <TouchableOpacity style={styles.buttonPrimary} onPress={this.createAcc}>
-              <Text style={styles.buttonPrimaryText}>Create Account</Text>
+        <View style={localStyles.container}>
+          <Text style={localStyles.title}>Welcome!</Text>
+          <TouchableOpacity style={localStyles.buttonPrimary} onPress={this.createAcc}>
+              <Text style={localStyles.buttonPrimaryText}>Create Account</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonSecondary}>
-              <Text style={styles.buttonSecondaryText}>Sign In</Text>
+          <TouchableOpacity style={localStyles.buttonSecondary}>
+              <Text style={localStyles.buttonSecondaryText}>Sign In</Text>
           </TouchableOpacity>
         </View>
       );
@@ -39,16 +40,16 @@ class Welcome extends React.Component{
 }
 
 export default Welcome;
-const styles = StyleSheet.create({
+const localStyles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: primaryColor,
+      backgroundColor: Styles.colors.primaryColor,
       alignItems: 'center',
       justifyContent: 'center',
     },
     title: {
       color: 'white',
-      fontSize: 25
+      fontSize: Styles.fonts.titleSize
     },
     buttonPrimary:{
       backgroundColor:'white',
@@ -58,8 +59,9 @@ const styles = StyleSheet.create({
       marginTop:10,
     },
     buttonPrimaryText:{
+      fontSize: Styles.fonts.buttonTextSize,
       fontWeight: "bold",
-      color: primaryColor,
+      color: Styles.colors.primaryColor,
       textAlign:'center',
       paddingLeft : 15,
       paddingRight : 15
@@ -74,6 +76,7 @@ const styles = StyleSheet.create({
       marginTop:10,
     },
     buttonSecondaryText:{
+      fontSize: Styles.fonts.buttonTextSize,
       fontWeight: "bold",
       color: 'white',
       textAlign:'center',
