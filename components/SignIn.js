@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput } from 'react-native';
-import * as Styles from '../styles';
 import * as GlobalStyles from '../globalStyles';
 import Inventory from './Inventory';
 
@@ -31,7 +30,7 @@ class SignIn extends React.Component {
             </View>
           );
     }
-    if (this.state.page == 'inventory'){
+    else if (this.state.page == 'inventory'){
         return (
             <Inventory />
         );
@@ -43,7 +42,7 @@ export default SignIn;
 const localStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Styles.colors.lightGray,
+    backgroundColor: GlobalStyles.colors.lightGray,
     alignItems: 'center',
     justifyContent: 'center',
   },

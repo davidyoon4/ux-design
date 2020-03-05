@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import CreateAcc from './CreateAcc';
 import SignIn from './SignIn';
-import * as Styles from '../styles';
 import * as GlobalStyles from '../globalStyles';
 
 class Welcome extends React.Component{
@@ -55,13 +54,14 @@ export default Welcome;
 const localStyles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: Styles.colors.primaryColor,
+      backgroundColor: '#4A9C2D',
       alignItems: 'center',
       justifyContent: 'center',
     },
     title: {
       color: 'white',
-      fontSize: Styles.fonts.titleSize
+      fontSize: 48,
+      fontWeight: 'bold'
     },
     buttonPrimary:{
       backgroundColor:'white',
@@ -71,9 +71,9 @@ const localStyles = StyleSheet.create({
       marginTop:10,
     },
     buttonPrimaryText:{
-      fontSize: Styles.fonts.buttonTextSize,
+      fontSize: 20,
       fontWeight: "bold",
-      color: Styles.colors.primaryColor,
+      color: '#4A9C2D',
       textAlign:'center',
       paddingLeft : 15,
       paddingRight : 15
@@ -88,7 +88,7 @@ const localStyles = StyleSheet.create({
       marginTop:10,
     },
     buttonSecondaryText:{
-      fontSize: Styles.fonts.buttonTextSize,
+      fontSize: 20,
       fontWeight: "bold",
       color: 'white',
       textAlign:'center',

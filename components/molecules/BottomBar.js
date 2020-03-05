@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity, Image } from 'react-native';
-import * as Styles from '../../styles';
 import * as GlobalStyles from '../../globalStyles';
 
 class BottomBar extends React.Component {
@@ -31,7 +30,7 @@ class BottomBar extends React.Component {
 export default BottomBar;
 const localStyles = StyleSheet.create({
   bottomBar: {
-    backgroundColor: '#c4c4c4',
+    backgroundColor: GlobalStyles.colors.gray,
     height: 72,
     alignSelf: 'stretch',
     flexDirection: 'row',

@@ -1,10 +1,10 @@
 import { StyleSheet} from 'react-native';
-import * as Styles from './styles';
 
 var colors = {
     primaryColor: '#4A9C2D',
     lightGray: '#F1F1F1',
-    inputBgColor: '#e5e5e6'
+    inputBgColor: '#e5e5e6',
+    gray: '#c4c4c4'
 };
 var fonts = {
     titleSize: 48,
@@ -65,4 +65,4 @@ const styles = StyleSheet.create({
     }
   });
 
-  export {styles};
+  export {styles,colors,fonts};
