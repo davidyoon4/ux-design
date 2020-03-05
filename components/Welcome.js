@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import CreateAcc from './CreateAcc';
+import SignIn from './SignIn';
 import * as Styles from '../styles';
 import * as GlobalStyles from '../globalStyles';
 
@@ -16,6 +17,12 @@ class Welcome extends React.Component{
     })
   }
 
+  signIn = () => {
+    this.setState({
+      page: 'signIn'
+    })
+  }
+
 
   render = () => {
     if (this.state.page == 'welcome'){
@@ -25,15 +32,20 @@ class Welcome extends React.Component{
           <TouchableOpacity style={localStyles.buttonPrimary} onPress={this.createAcc}>
               <Text style={localStyles.buttonPrimaryText}>Create Account</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={localStyles.buttonSecondary}>
+          <TouchableOpacity style={localStyles.buttonSecondary} onPress={this.signIn}>
               <Text style={localStyles.buttonSecondaryText}>Sign In</Text>
           </TouchableOpacity>
         </View>
       );
     }
-    else{
+    else if (this.state.page == 'createAcc'){
       return (
         <CreateAcc page={this.state.page} />
+      );
+    }
+    else if (this.state.page == 'signIn'){
+      return (
+        <SignIn page={this.state.page} />
       );
     }
   }
