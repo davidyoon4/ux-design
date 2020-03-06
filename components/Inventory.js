@@ -43,6 +43,37 @@ class Inventory extends React.Component {
   }
 
   render = () => {
+    let tableRow1paths = [require('../images/1.png'),require('../images/2.png'),require('../images/3.png')];
+    let tableRow1 = [];
+    for (var i=0; i<tableRow1paths.length; i++){
+      tableRow1.push(
+        <Image style={localStyles.placeholder} source={tableRow1paths[i]}/>
+      )
+    }
+
+    let tableRow2paths = [require('../images/4.png'),require('../images/5.png'),require('../images/6.png')];
+    let tableRow2 = [];
+    for (var i=0; i<tableRow2paths.length; i++){
+      tableRow2.push(
+        <Image style={localStyles.placeholder} source={tableRow2paths[i]}/>
+      )
+    }
+
+    let newRow3paths = [require('../images/7.png'),require('../images/8.png'),require('../images/9.png')];
+    let newRow3 = [];
+    for (var i=0; i<newRow3paths.length; i++){
+      newRow3.push(
+        <Image style={localStyles.placeholder} source={newRow3paths[i]}/>
+      )
+    }
+
+    let newRow4paths = [require('../images/10.png'),require('../images/11.png'),require('../images/12.png')];
+    let newRow4 = [];
+    for (var i=0; i<newRow3paths.length; i++){
+      newRow4.push(
+        <Image style={localStyles.placeholder} source={newRow4paths[i]}/>
+      )
+    }
     return (
       <View style={localStyles.container}>
         <View style={localStyles.searchContainer}>
@@ -67,31 +98,23 @@ class Inventory extends React.Component {
         </TouchableOpacity>
         </View>
 
-        <Text>Tables</Text>
+        <Text style={localStyles.header}>Tables</Text>
         <View>
           <View style={localStyles.row}>
-            <View style={localStyles.placeholder}></View>
-            <View style={localStyles.placeholder}></View>
-            <View style={localStyles.placeholder}></View>
+            {tableRow1}
           </View>
           <View style={localStyles.row}>
-            <View style={localStyles.placeholder}></View>
-            <View style={localStyles.placeholder}></View>
-            <View style={localStyles.placeholder}></View>
+          {tableRow2}
           </View>
         </View>
         
-        <Text>newest</Text>
+        <Text style={localStyles.header2}>Newest</Text>
         <View>
           <View style={localStyles.row}>
-            <View style={localStyles.placeholder}></View>
-            <View style={localStyles.placeholder}></View>
-            <View style={localStyles.placeholder}></View>
+          {newRow3}
           </View>
           <View style={localStyles.row}>
-            <View style={localStyles.placeholder}></View>
-            <View style={localStyles.placeholder}></View>
-            <View style={localStyles.placeholder}></View>
+          {newRow4}
           </View>
         </View>
 
@@ -114,7 +137,7 @@ const localStyles = StyleSheet.create({
   },
   searchBar: {
     height: 37,
-    width: 297,
+    width: 350,
     borderRadius: 15,
     paddingLeft: 35,
     backgroundColor: GlobalStyles.colors.gray,
@@ -164,5 +187,19 @@ const localStyles = StyleSheet.create({
     height: 100,
     marginHorizontal: 5,
     marginVertical: 5
+  },
+  header:{
+    textAlign: "left",
+    width: 320,
+    fontSize: 18,
+  },
+  header2:{
+    textAlign: "left",
+    width: 320,
+    fontSize: 18,
+    paddingTop: 25,
   }
+
+
+
 });
