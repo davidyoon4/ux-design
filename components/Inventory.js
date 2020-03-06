@@ -67,6 +67,34 @@ class Inventory extends React.Component {
         </TouchableOpacity>
         </View>
 
+        <Text>Tables</Text>
+        <View>
+          <View style={localStyles.row}>
+            <View style={localStyles.placeholder}></View>
+            <View style={localStyles.placeholder}></View>
+            <View style={localStyles.placeholder}></View>
+          </View>
+          <View style={localStyles.row}>
+            <View style={localStyles.placeholder}></View>
+            <View style={localStyles.placeholder}></View>
+            <View style={localStyles.placeholder}></View>
+          </View>
+        </View>
+        
+        <Text>newest</Text>
+        <View>
+          <View style={localStyles.row}>
+            <View style={localStyles.placeholder}></View>
+            <View style={localStyles.placeholder}></View>
+            <View style={localStyles.placeholder}></View>
+          </View>
+          <View style={localStyles.row}>
+            <View style={localStyles.placeholder}></View>
+            <View style={localStyles.placeholder}></View>
+            <View style={localStyles.placeholder}></View>
+          </View>
+        </View>
+
         <BottomBar active='truck'/>
       </View>
     );
@@ -76,7 +104,7 @@ class Inventory extends React.Component {
 export default Inventory;
 const localStyles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1.5,
     backgroundColor: GlobalStyles.colors.lightGray,
     alignItems: 'center',
     justifyContent: 'center',
@@ -93,7 +121,8 @@ const localStyles = StyleSheet.create({
   },
   searchContainer: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 25
   },
   searchIcon: {
     marginRight: -25,
@@ -125,5 +154,15 @@ const localStyles = StyleSheet.create({
     paddingRight: 10,
     marginRight: 5,
     marginLeft: 5
+  },
+  row: {
+    flexDirection: 'row'
+  },
+  placeholder:{
+    backgroundColor: 'pink',
+    width: 100,
+    height: 100,
+    marginHorizontal: 5,
+    marginVertical: 5
   }
 });
