@@ -1,22 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput } from 'react-native';
 import * as GlobalStyles from '../globalStyles';
-import Inventory from './Inventory';
 
 class CreateAcc extends React.Component {
-  constructor(props) {
+  constructor(props){
     super(props);
-    this.state = { page: this.props.page }
-  }
-
-  inventory = () => {
-    this.setState({
-      page: 'inventory'
-    })
   }
 
   render = () => {
-    if (this.state.page == 'createAcc') {
       return (
         <View style={localStyles.container}>
           <Text style={GlobalStyles.styles.title}>Sign Up</Text>
@@ -28,18 +19,11 @@ class CreateAcc extends React.Component {
             <TextInput style={GlobalStyles.styles.input} placeholder="General Location" />
           </View>
           <TouchableOpacity style={GlobalStyles.styles.buttonPrimary}>
-            <Text style={GlobalStyles.styles.buttonPrimaryText} onPress={this.inventory}>Sign Up</Text>
+            <Text style={GlobalStyles.styles.buttonPrimaryText} onPress={() => this.props.changeScreen('inventory')}>Sign Up</Text>
           </TouchableOpacity>
         </View>
       );
     }
-    else if (this.state.page == 'inventory') {
-      return (
-        <Inventory />
-      );
-    }
-
-  }
 }
 
 export default CreateAcc;

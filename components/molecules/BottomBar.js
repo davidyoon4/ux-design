@@ -1,11 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Image } from 'react-native';
 import * as GlobalStyles from '../../globalStyles';
 
 class BottomBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { page: this.props.page }
   }
 
   render = () => {
@@ -17,10 +16,10 @@ class BottomBar extends React.Component {
 
     return (
       <View style={localStyles.bottomBar}>
-          <TouchableOpacity>{truckIcon}</TouchableOpacity>
-          <TouchableOpacity>{newIcon}</TouchableOpacity>
-          <TouchableOpacity>{locationIcon}</TouchableOpacity>
-          <TouchableOpacity>{scanIcon}</TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.changeScreen('inventory')}>{truckIcon}</TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.changeScreen('request')}>{newIcon}</TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.changeScreen('map')}>{locationIcon}</TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.changeScreen('scanner')}>{scanIcon}</TouchableOpacity>
           <TouchableOpacity>{profileIcon}</TouchableOpacity>
       </View>
     );

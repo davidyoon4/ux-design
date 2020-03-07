@@ -4,7 +4,8 @@ var colors = {
     primaryColor: '#4A9C2D',
     lightGray: '#F1F1F1',
     inputBgColor: '#e5e5e6',
-    gray: '#c4c4c4'
+    gray: '#c4c4c4',
+    blue: '#007AFF'
 };
 var fonts = {
     titleSize: 48,
@@ -62,7 +63,16 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'flex-start',
         // height: 25
-    }
+    },
+    row: {
+      flexDirection: 'row'
+    },
+    image:{
+      width: 100,
+      height: 100,
+      marginHorizontal: 5,
+      marginVertical: 5
+    },
   });
 
   export {styles,colors,fonts};
