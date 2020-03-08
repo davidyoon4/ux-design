@@ -81,7 +81,7 @@ class Inventory extends React.Component {
             </View>
           </View>
           
-          <Text style={localStyles.header2}>Newest</Text>
+          <Text style={localStyles.header}>Newest</Text>
           <View>
             <View style={GlobalStyles.styles.row}>
             {newRow3}
@@ -122,9 +122,11 @@ const localStyles = StyleSheet.create({
     zIndex:9
   },
   filterContainer: {
+    marginRight: 50,
     flexDirection: 'row',
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   filter: {
     backgroundColor: GlobalStyles.colors.gray,
@@ -134,7 +136,6 @@ const localStyles = StyleSheet.create({
     paddingBottom: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    marginRight: 5,
     marginLeft: 5
   },
   filterActive: {
@@ -145,7 +146,6 @@ const localStyles = StyleSheet.create({
     paddingBottom: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    marginRight: 5,
     marginLeft: 5
   },
   row: {
@@ -160,15 +160,12 @@ const localStyles = StyleSheet.create({
   },
   header:{
     textAlign: "left",
-    width: 320,
+    width: 300,
     fontSize: 18,
-  },
-  header2:{
-    textAlign: "left",
-    width: 320,
-    fontSize: 18,
+    alignSelf: 'stretch',
     paddingTop: 25,
-  }
+    paddingLeft: 28
+  },
 
 
 

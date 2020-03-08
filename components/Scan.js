@@ -22,7 +22,7 @@ class Scan extends React.Component{
             <Text style={localStyles.card__title}>IKEA Desk</Text>
             <Image source={require('../images/scanner/cardImage.png')}/>
             <View style={localStyles.card__profile}>
-                <Image source={require('../images/scanner/david.png')}/>
+                <Image style={localStyles.profilePic} source={require('../images/scanner/bigDavid.png')}/>
                 <View style={localStyles.profileText}>
                     <Text>David Yoon</Text>
                     <Text>McCormick 2021</Text>
@@ -75,5 +75,10 @@ const localStyles = StyleSheet.create({
         zIndex: 99,
         position: 'absolute',
         bottom: 72
+    },
+    profilePic :{
+        height: 69,
+        width: 69,
+        borderRadius: 50
     }
   });

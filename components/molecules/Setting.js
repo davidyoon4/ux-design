@@ -42,13 +42,15 @@ class Setting extends React.Component {
 export default Setting;
 const localStyles = StyleSheet.create({
     setting: {
-        backgroundColor: GlobalStyles.colors.lightGray,
+        backgroundColor: 'white',
         alignSelf: 'stretch',
         paddingVertical: 10,
         paddingHorizontal: 10,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        borderWidth: 0.3,
+        borderColor: GlobalStyles.colors.gray
     },
     row: {
         flexDirection: 'row',

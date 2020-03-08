@@ -6,6 +6,7 @@ import SignIn from './components/SignIn';
 import Welcome from './components/Welcome';
 import Map from './components/Map';
 import Scan from './components/Scan';
+import Profile from './components/Profile';
 
 class Controller extends React.Component{
   constructor(props){
@@ -53,6 +54,11 @@ class Controller extends React.Component{
     else if (this.state.page == 'scan'){
       return (
         <Scan changeScreen={this.changeScreen}/>
+      );
+    }
+    else if (this.state.page == 'profile'){
+      return (
+        <Profile changeScreen={this.changeScreen}/>
       );
     }
   }

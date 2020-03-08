@@ -12,7 +12,7 @@ class Request extends React.Component{
 
 
   render = () => {
-    let tableRowpaths = [require('../images/1.png'),require('../images/2.png'),require('../images/3.png')];
+    let tableRowpaths = [require('../images/7.png'),require('../images/2.png'),require('../images/3.png')];
     let tableRow = [];
     for (var i=0; i<tableRowpaths.length; i++){
       tableRow.push(
@@ -49,24 +49,19 @@ export default Request;
 const localStyles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: GlobalStyles.colors.gray,
+        backgroundColor: GlobalStyles.colors.lightGray,
         alignItems: 'center',
         justifyContent: 'space-between',
       },
     row: {
         flexDirection: 'row'
       },
-      image:{
-        backgroundColor: 'pink',
-        width: 100,
-        height: 100,
-        marginHorizontal: 5,
-        marginVertical: 5
-      },
     map:{
-        height: 150
+        position: 'absolute',
+        bottom: 72
     },
     settingsContainer: {
-        width: '100%'
+        width: '100%',
+        marginBottom: 225
     }
   });

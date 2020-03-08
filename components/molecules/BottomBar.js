@@ -20,7 +20,7 @@ class BottomBar extends React.Component {
           <TouchableOpacity onPress={() => this.props.changeScreen('request')}>{newIcon}</TouchableOpacity>
           <TouchableOpacity onPress={() => this.props.changeScreen('map')}>{locationIcon}</TouchableOpacity>
           <TouchableOpacity onPress={() => this.props.changeScreen('scan')}>{scanIcon}</TouchableOpacity>
-          <TouchableOpacity>{profileIcon}</TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.changeScreen('profile')}>{profileIcon}</TouchableOpacity>
       </View>
     );
   }

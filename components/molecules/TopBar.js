@@ -22,11 +22,12 @@ export default TopBar;
 const localStyles = StyleSheet.create({
   topBar: {
     backgroundColor: '#E5E5E5',
-    height: 50,
+    height: 70,
     alignSelf: 'stretch',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'flex-end',
+    paddingTop: 20
   },
   topBar__item: {
       fontSize: 17,

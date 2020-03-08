@@ -62,13 +62,12 @@ const styles = StyleSheet.create({
         backgroundColor: colors.inputBgColor,
         flex: 1,
         alignItems: 'flex-start',
-        // height: 25
     },
     row: {
-      flexDirection: 'row'
+      flexDirection: 'row',
     },
     image:{
-      width: 100,
+      width: 132,
       height: 100,
       marginHorizontal: 5,
       marginVertical: 5
