@@ -32,9 +32,11 @@ const localStyles = StyleSheet.create({
   topBar__item: {
       fontSize: 17,
       marginHorizontal: 15,
-      color: GlobalStyles.colors.blue
+      color: GlobalStyles.colors.blue,
+      marginBottom: 5
   },
   topBar__title: {
-      fontSize: 24
+      fontSize: 24,
+      marginBottom: 5
   }
 });

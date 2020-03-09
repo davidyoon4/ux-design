@@ -68,7 +68,7 @@ const localStyles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',
-        width: '70%',
+        width: '80%',
         marginVertical: 15
     },
     venmoPartial: {

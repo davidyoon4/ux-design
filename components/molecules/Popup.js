@@ -20,14 +20,14 @@ class Popup extends React.Component {
         return (
             <View style={localStyles.card}>
                 <Text style={localStyles.card__title}>44 Monty Chair</Text>
-                <Image style={localStyles.card__image}source={require('../../images/chair.jpg')} />
+                <Image style={localStyles.card__image} source={require('../../images/chair.jpg')} />
                 <View style={localStyles.fullWidth}>
-                    <Field fieldTitle="Price" fieldInfo="$40, non-negotiable"/>
-                    <Field fieldTitle="Description" fieldInfo="this is a chair ... it’s a good chair"/>
-                    <Field fieldTitle="Expiration Date" fieldInfo="August 17, 2020"/>
-                    <Field fieldTitle="Seller" fieldInfo="chelly@u.northwestern.edu"/>
+                    <Field fieldTitle="Price" fieldInfo="$40, non-negotiable" />
+                    <Field fieldTitle="Description" fieldInfo="this is a chair ... it’s a good chair" />
+                    <Field fieldTitle="Expiration Date" fieldInfo="August 17, 2020" />
+                    <Field fieldTitle="Seller" fieldInfo="chelly@u.northwestern.edu" />
                 </View>
-                <Image style={localStyles.qr} source={require('../../images/scanner/QR.png')}/>
+                <Image style={localStyles.qr} source={require('../../images/scanner/QR.png')} />
             </View>
         );
     }
@@ -44,7 +44,15 @@ const localStyles = StyleSheet.create({
         borderRadius: 15,
         paddingVertical: 20,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 10,
+        },
+        shadowOpacity: 0.51,
+        shadowRadius: 13.16,
+        elevation: 20,
     },
     card__title: {
         fontSize: 24,
@@ -58,7 +66,7 @@ const localStyles = StyleSheet.create({
     fullWidth: {
         alignSelf: 'stretch'
     },
-    qr:{
+    qr: {
         marginTop: 10
     }
 });
