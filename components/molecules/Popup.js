@@ -25,7 +25,7 @@ class Popup extends React.Component {
                     <Field fieldTitle="Price" fieldInfo="$40, non-negotiable" />
                     <Field fieldTitle="Description" fieldInfo="this is a chair ... it’s a good chair" />
                     <Field fieldTitle="Expiration Date" fieldInfo="August 17, 2020" />
-                    <Field fieldTitle="Seller" fieldInfo="isaac@u.northwestern.edu" />
+                    <Field fieldTitle="Seller" fieldInfo="angel@u.northwestern.edu" />
                 </View>
                 <Image style={localStyles.qr} source={require('../../images/scanner/QR.png')} />
             </View>

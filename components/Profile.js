@@ -29,7 +29,7 @@ class Profile extends React.Component {
                 <View>
                     <Field fieldTitle="Curriculum" fieldInfo="Medill School of Journalism"/>
                     <Field fieldTitle="Graduation" fieldInfo="Spring 2022"/>
-                    <Field fieldTitle="Email" fieldInfo="angelmelendez2022@u.northwestern.edu"/>
+                    <Field fieldTitle="Email" fieldInfo="angel@u.northwestern.edu"/>
                     
                     <Field fieldTitle="Notifications" fieldInfo="For everything" switch/>
                 </View>
