@@ -9,7 +9,7 @@ class Welcome extends React.Component{
   render = () => {
       return (
         <View style={localStyles.container}>
-          <Text style={localStyles.title}>Welcome!</Text>
+          <Text style={localStyles.title}>Welcome to The Trunk!</Text>
           <TouchableOpacity style={localStyles.buttonPrimary} onPress={() => this.props.changeScreen('createAcc')}>
               <Text style={localStyles.buttonPrimaryText}>Create Account</Text>
           </TouchableOpacity>
@@ -32,7 +32,9 @@ const localStyles = StyleSheet.create({
     title: {
       color: 'white',
       fontSize: 48,
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      textAlign: 'center',
+      paddingHorizontal: 15
     },
     buttonPrimary:{
       backgroundColor:'white',
