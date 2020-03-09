@@ -19,7 +19,7 @@ class CreateAcc extends React.Component {
             <TextInput style={GlobalStyles.styles.input} placeholder="General Location" />
           </View>
           <TouchableOpacity style={GlobalStyles.styles.buttonPrimary}>
-            <Text style={GlobalStyles.styles.buttonPrimaryText} onPress={() => this.props.changeScreen('inventory')}>Sign Up</Text>
+            <Text style={GlobalStyles.styles.buttonPrimaryText} onPress={() => this.props.changeScreen('profile')}>Sign Up</Text>
           </TouchableOpacity>
         </View>
       );
