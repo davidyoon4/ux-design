@@ -14,13 +14,13 @@ class Scan extends React.Component{
 
 
   render = () => {
-      let venmoPath = this.state.venmoPartial ? require('../images/scanner/partial.png') :require('../images/scanner/full.png');
+      let venmoImage = this.state.venmoPartial ? <Image style={localStyles.venmoImage} source={require('../images/scanner/partial.png')}/> : <Image style={localStyles.venmoImage2} source={require('../images/scanner/full.png')}/>;
       return (
         <View style={localStyles.container}>
         <TopBar title='' left='Back' right=''/>
         <View style={localStyles.card}>
-            <Text style={localStyles.card__title}>IKEA Desk</Text>
-            <Image source={require('../images/scanner/cardImage.png')}/>
+            <Text style={localStyles.card__title}>44 Monty Chair</Text>
+            <Image style={localStyles.card__image} source={require('../images/chair2.jpg')}/>
             <View style={localStyles.card__profile}>
                 <Image style={localStyles.profilePic} source={require('../images/scanner/bigDavid.png')}/>
                 <View style={localStyles.profileText}>
@@ -32,7 +32,7 @@ class Scan extends React.Component{
             <Image source={require('../images/scanner/QR.png')}/>
         </View>
         <TouchableOpacity style={localStyles.venmoPartial} onPress={() => this.setState({venmoPartial: !this.state.venmoPartial})}>
-            <Image source={venmoPath}/>
+            {venmoImage}
         </TouchableOpacity>
     
         <BottomBar active='scan' changeScreen={this.props.changeScreen}/>
@@ -72,13 +72,25 @@ const localStyles = StyleSheet.create({
         marginVertical: 15
     },
     venmoPartial: {
-        zIndex: 99,
+        zIndex: 9,
         position: 'absolute',
         bottom: 72
+    },
+    venmoImage: {
+        width: 420,
+        zIndex: 9,
+    },
+    venmoImage2: {
+        height: 600,
+        width: 420
     },
     profilePic :{
         height: 69,
         width: 69,
         borderRadius: 50
+    },
+    card__image: {
+        height: 200,
+        width: 250
     }
   });

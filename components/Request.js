@@ -12,7 +12,7 @@ class Request extends React.Component{
 
 
   render = () => {
-    let tableRowpaths = [require('../images/7.png'),require('../images/2.png'),require('../images/3.png')];
+    let tableRowpaths = [require('../images/chair.jpg'),require('../images/chair2.jpg'),require('../images/chair3.jpg')];
     let tableRow = [];
     for (var i=0; i<tableRowpaths.length; i++){
       tableRow.push(
@@ -21,7 +21,7 @@ class Request extends React.Component{
     }
       return (
         <View style={localStyles.container}>
-        <TopBar title='IKEA Desk' left='Back' right='Submit'/>
+        <TopBar title='44 Monty Chair' left='Back' right='Submit'/>
         <View>
           <View style={GlobalStyles.styles.row}>
             {tableRow}

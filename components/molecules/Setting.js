@@ -5,7 +5,7 @@ import * as GlobalStyles from '../../globalStyles';
 class Setting extends React.Component {
   constructor(props) {
     super(props);
-    this.state={switchValue: true}
+    this.state={switchValue: false}
   }
 
   render = () => {
