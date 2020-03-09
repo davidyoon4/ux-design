@@ -21,7 +21,7 @@ class Request extends React.Component{
     }
       return (
         <View style={localStyles.container}>
-        <TopBar title='44 Monty Chair' left='Back' right='Submit'/>
+        <TopBar title='44 Monty Chair' left='Back' right='Submit' changeScreen={this.props.changeScreen}/>
         <View>
           <View style={GlobalStyles.styles.row}>
             {tableRow}
@@ -29,8 +29,8 @@ class Request extends React.Component{
         </View>
         
         <View style={localStyles.settingsContainer}>
-        <Setting title="Seller" info="David Yoon"/>
-        <Setting title="Description" info="this is a desk..."/>
+        <Setting title="Seller" info="Angel Melendez"/>
+        <Setting title="Description" info="this is a chair..."/>
         <Setting title="Price" info="$50"/>
         <Setting title="Negotiable" switch/>
         <Setting title="Expiration Date" info="Aug 7"/>

@@ -22,10 +22,10 @@ class Scan extends React.Component{
             <Text style={localStyles.card__title}>44 Monty Chair</Text>
             <Image style={localStyles.card__image} source={require('../images/chair2.jpg')}/>
             <View style={localStyles.card__profile}>
-                <Image style={localStyles.profilePic} source={require('../images/scanner/bigDavid.png')}/>
+                <Image style={localStyles.profilePic} source={require('../images/scanner/angel.jpg')}/>
                 <View style={localStyles.profileText}>
-                    <Text>David Yoon</Text>
-                    <Text>McCormick 2021</Text>
+                    <Text>Angel Melendez</Text>
+                    <Text>Medill 2022</Text>
                     <Text>he/him/his</Text>
                 </View>
             </View>

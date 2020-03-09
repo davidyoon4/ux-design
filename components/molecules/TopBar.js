@@ -12,7 +12,7 @@ class TopBar extends React.Component {
       <View style={localStyles.topBar}>
           <TouchableOpacity><Text style={localStyles.topBar__item}>{this.props.left}</Text></TouchableOpacity>
           <TouchableOpacity><Text style={localStyles.topBar__title}>{this.props.title}</Text></TouchableOpacity>
-          <TouchableOpacity><Text style={localStyles.topBar__item}>{this.props.right}</Text></TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.changeScreen('map')}><Text style={localStyles.topBar__item}>{this.props.right}</Text></TouchableOpacity>
       </View>
     );
   }

@@ -20,16 +20,16 @@ class Profile extends React.Component {
         return (
             <View style={localStyles.container}>
                 <View style={localStyles.profileContainer}>
-                    <Image style={localStyles.profilePic} source={require('../images/scanner/bigDavid.png')} />
+                    <Image style={localStyles.profilePic} source={require('../images/scanner/angel.jpg')} />
                     <View>
-                        <Text style={localStyles.profileName}>David Yoon</Text>
+                        <Text style={localStyles.profileName}>Angel Melendez</Text>
                         <Text style={localStyles.profileConnections}>404 connections</Text>
                     </View>
                 </View>
                 <View>
-                    <Field fieldTitle="Curriculum" fieldInfo="McCormick School of Engineering"/>
-                    <Field fieldTitle="Graduation" fieldInfo="Spring 2021"/>
-                    <Field fieldTitle="Email" fieldInfo="davidyoon2021@u.northwestern.edu"/>
+                    <Field fieldTitle="Curriculum" fieldInfo="Medill School of Journalism"/>
+                    <Field fieldTitle="Graduation" fieldInfo="Spring 2022"/>
+                    <Field fieldTitle="Email" fieldInfo="angelmelendez2022@u.northwestern.edu"/>
                     
                     <Field fieldTitle="Notifications" fieldInfo="For everything" switch/>
                 </View>
