@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, Image } from 'react-native';
 import * as GlobalStyles from '../globalStyles';
 import BottomBar from './molecules/BottomBar';
+import Popup from './molecules/Popup';
 
 class Inventory extends React.Component {
   constructor(props) {
@@ -10,11 +11,13 @@ class Inventory extends React.Component {
       price: false,
       type: false,
       color: false,
-      date: false
+      date: false,
+      popupOpen: false
     }
   }
 
   render = () => {
+    let popup = this.state.popupOpen ? <Popup /> : <View></View>;
     let tableRow1paths = [require('../images/1.png'),require('../images/2.png'),require('../images/3.png')];
     let tableRow1 = [];
     for (var i=0; i<tableRow1paths.length; i++){
@@ -31,15 +34,26 @@ class Inventory extends React.Component {
       )
     }
 
-    let newRow3paths = [require('../images/7.png'),require('../images/8.png'),require('../images/9.png')];
+    let newRow3paths = [require('../images/chair.jpg'),require('../images/8.png'),require('../images/9.png')];
     let newRow3 = [];
     for (var i=0; i<newRow3paths.length; i++){
-      newRow3.push(
-        <Image style={GlobalStyles.styles.image} source={newRow3paths[i]}/>
-      )
+      if (i != 0){
+        newRow3.push(
+          <Image style={GlobalStyles.styles.image} source={newRow3paths[i]}/>
+        )
+      }
+      else{
+        newRow3.push(
+          <TouchableOpacity styles={localStyles.chair} onPress={() => this.setState({ popupOpen: !this.state.popupOpen })}>
+            <Image style={GlobalStyles.styles.image} source={newRow3paths[i]}/>
+          </TouchableOpacity>
+          
+        )
+      }
+
     }
 
-    let newRow4paths = [require('../images/10.png'),require('../images/11.png'),require('../images/12.png')];
+    let newRow4paths = [require('../images/10.png'),require('../images/7.png'),require('../images/12.png')];
     let newRow4 = [];
     for (var i=0; i<newRow3paths.length; i++){
       newRow4.push(
@@ -90,7 +104,7 @@ class Inventory extends React.Component {
             {newRow4}
             </View>
           </View>
-  
+          {popup}
           <BottomBar active='truck' changeScreen={this.props.changeScreen}/>
         </View>
       );
@@ -166,7 +180,9 @@ const localStyles = StyleSheet.create({
     paddingTop: 25,
     paddingLeft: 28
   },
-
+  noCard: {
+    height: 0
+},
 
 
 });

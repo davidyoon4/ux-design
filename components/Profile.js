@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, Image, Switch } from 'react-native';
 import * as GlobalStyles from '../globalStyles';
 import BottomBar from './molecules/BottomBar';
+import Field from './molecules/Field';
 
 class Profile extends React.Component {
     constructor(props) {
@@ -26,25 +27,14 @@ class Profile extends React.Component {
                     </View>
                 </View>
                 <View>
-                    <Text style={localStyles.fieldTitle}>Curriculum</Text>
-                    <Text style={localStyles.fieldInfo}>McCormick School of Engineering</Text>
-                    <Text style={localStyles.line}>____________________________________________________________</Text>
-                    <Text style={localStyles.fieldTitle}>Graduation</Text>
-                    <Text style={localStyles.fieldInfo}>Spring 2021</Text>
-                    <Text style={localStyles.line}>____________________________________________________________</Text>
-                    <Text style={localStyles.fieldTitle}>Email</Text>
-                    <Text style={localStyles.fieldInfo}>davidyoon2021@u.northwestern.edu</Text>
-                    <Text style={localStyles.line}>____________________________________________________________</Text>
-                    <Text style={localStyles.fieldTitle}>Notifications</Text>
-                    <View style={localStyles.notifContainer}>
-                    <Text style={localStyles.fieldInfo}>For everything</Text>
-                    <Switch value={this.state.switchValue} onValueChange={() => this.setState({switchValue: !this.state.switchValue})}/>
-                    </View>
-                    <Text style={localStyles.line}>____________________________________________________________</Text>
-
+                    <Field fieldTitle="Curriculum" fieldInfo="McCormick School of Engineering"/>
+                    <Field fieldTitle="Graduation" fieldInfo="Spring 2021"/>
+                    <Field fieldTitle="Email" fieldInfo="davidyoon2021@u.northwestern.edu"/>
+                    
+                    <Field fieldTitle="Notifications" fieldInfo="For everything" switch/>
                 </View>
                 <View style={localStyles.qrContainer}>
-                    <Image source={require('../images/scanner/QR.png')}/>
+                    <Image style={localStyles.qr} source={require('../images/scanner/QR.png')}/>
                 </View>
                 <BottomBar active='profile' changeScreen={this.props.changeScreen} />
             </View>
@@ -78,26 +68,12 @@ const localStyles = StyleSheet.create({
     profileConnections: {
         fontSize: 18
     },
-    fieldTitle: {
-        color: '#848484',
-        fontSize: 16,
-        paddingLeft: 20,
-        marginTop: 8
-    },
-    fieldInfo: {
-        fontSize: 16,
-        paddingLeft: 20,
-    },
-    line: {
-        color: GlobalStyles.colors.gray
-    },
-    notifContainer : {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        paddingRight: 15
-    },
     qrContainer: {
         alignSelf: 'stretch',
         alignItems: 'center'
+    },
+    qr: {
+        width: 100,
+        height: 100
     }
 });
